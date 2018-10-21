@@ -56,13 +56,10 @@ def train_test_split(total, trainval_percent, train_percent, set):
             directory = "test"
             test_num += 1
             test_path1 = os.path.join(os.getcwd(), 'dataset/{}'.format(directory))
-            test_path2 = os.path.join(test_path1, set)
             if (not os.path.exists(test_path1)):
                 os.mkdir(test_path1)
-            if (not os.path.exists(test_path2)):
-                os.mkdir(test_path2)
             filePath = os.path.join(path, name)
-            newfile = os.path.join(test_path2, os.path.basename(name))
+            newfile = os.path.join(test_path1, os.path.basename(name))
             shutil.copyfile(filePath, newfile)
             # print(name)
     print("train total : " + str(train_num))
@@ -70,6 +67,7 @@ def train_test_split(total, trainval_percent, train_percent, set):
     print("test total : " + str(test_num))
     total_num = train_num + val_num + test_num
     print("total number : " + str(total_num))
+
 
 
 path = os.getcwd() + "/images/"
