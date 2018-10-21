@@ -72,6 +72,8 @@ def train_test_split(total, trainval_percent, train_percent, set):
 
 path = os.getcwd() + "/images/"
 saveBasePath = os.getcwd() + "/dataset/"
+if (not os.path.exists(saveBasePath)):
+    os.mkdir(saveBasePath)
 trainval_percent = 0.9
 train_percent = 0.89
 
