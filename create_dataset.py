@@ -69,9 +69,9 @@ saveBasePath = os.getcwd() + "/dataset/"
 trainval_percent = 0.9
 train_percent = 0.89
 
-dogs = [path+i for i in os.listdir(path) if 'dog' in i]
-cats=[path+i for i in os.listdir(path) if 'cat' in i]
+cars = [path+i for i in os.listdir(path) if 'car' in i]
+trucks = [path+i for i in os.listdir(path) if 'truck' in i]
 
-train_test_split(dogs, trainval_percent, train_percent)
-train_test_split(cats, trainval_percent, train_percent)
+train_test_split(cars, trainval_percent, train_percent)
+train_test_split(trucks, trainval_percent, train_percent)
 
