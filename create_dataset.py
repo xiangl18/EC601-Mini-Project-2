@@ -2,7 +2,7 @@ import os
 import shutil
 import random
 
-def train_test_split(total, trainval_percent, train_percent):
+def train_test_split(total, trainval_percent, train_percent, set):
     num = len(total)
     list = range(num)
     tv = int(num * trainval_percent)
@@ -23,11 +23,14 @@ def train_test_split(total, trainval_percent, train_percent):
                 # print("train: "+name+" "+str(train_num))
                 directory = "train"
                 train_num += 1
-                train_path = os.path.join(os.getcwd(), 'dataset/{}'.format(directory))
-                if (not os.path.exists(train_path)):
-                    os.mkdir(train_path)
+                train_path1 = os.path.join(os.getcwd(), 'dataset/{}'.format(directory))
+                train_path2 = os.path.join(train_path1, set)
+                if (not os.path.exists(train_path1)):
+                    os.mkdir(train_path1)
+                if (not os.path.exists(train_path2)):
+                    os.mkdir(train_path2)
                 filePath = os.path.join(path, name)
-                newfile = os.path.join(saveBasePath, os.path.join(directory, os.path.basename(name)))
+                newfile = os.path.join(train_path2, os.path.basename(name))
                 shutil.copyfile(filePath, newfile)
 
             else:
@@ -35,12 +38,15 @@ def train_test_split(total, trainval_percent, train_percent):
                 # print("val")
                 # print("val: "+name+" "+str(val_num))
                 directory = "validation"
-                validation_path = os.path.join(os.getcwd(), 'dataset/{}'.format(directory))
-                if (not os.path.exists(validation_path)):
-                    os.mkdir(validation_path)
                 val_num += 1
+                validation_path1 = os.path.join(os.getcwd(), 'dataset/{}'.format(directory))
+                validation_path2 = os.path.join(validation_path1, set)
+                if (not os.path.exists(validation_path1)):
+                    os.mkdir(validation_path1)
+                if (not os.path.exists(validation_path2)):
+                    os.mkdir(validation_path2)
                 filePath = os.path.join(path, name)
-                newfile = os.path.join(saveBasePath, os.path.join(directory, os.path.basename(name)))
+                newfile = os.path.join(validation_path2, os.path.basename(name))
                 shutil.copyfile(filePath, newfile)
                 # print(name)
         else:  # test set
@@ -48,12 +54,15 @@ def train_test_split(total, trainval_percent, train_percent):
             # print("test")
             # print("test: "+name+" "+str(test_num))
             directory = "test"
-            test_path = os.path.join(os.getcwd(), 'dataset/{}'.format(directory))
-            if (not os.path.exists(test_path)):
-                os.mkdir(test_path)
             test_num += 1
+            test_path1 = os.path.join(os.getcwd(), 'dataset/{}'.format(directory))
+            test_path2 = os.path.join(test_path1, set)
+            if (not os.path.exists(test_path1)):
+                os.mkdir(test_path1)
+            if (not os.path.exists(test_path2)):
+                os.mkdir(test_path2)
             filePath = os.path.join(path, name)
-            newfile = os.path.join(saveBasePath, os.path.join(directory, os.path.basename(name)))
+            newfile = os.path.join(test_path2, os.path.basename(name))
             shutil.copyfile(filePath, newfile)
             # print(name)
     print("train total : " + str(train_num))
@@ -72,6 +81,6 @@ train_percent = 0.89
 cars = [path+i for i in os.listdir(path) if 'car' in i]
 trucks = [path+i for i in os.listdir(path) if 'truck' in i]
 
-train_test_split(cars, trainval_percent, train_percent)
-train_test_split(trucks, trainval_percent, train_percent)
+train_test_split(cars, trainval_percent, train_percent, 'cars')
+train_test_split(trucks, trainval_percent, train_percent, 'trucks')
 
