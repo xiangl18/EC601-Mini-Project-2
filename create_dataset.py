@@ -72,7 +72,6 @@ def train_test_split(total, trainval_percent, train_percent, set):
     print("total number : " + str(total_num))
 
 
-
 path = os.getcwd() + "/images/"
 saveBasePath = os.getcwd() + "/dataset/"
 trainval_percent = 0.9
