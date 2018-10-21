@@ -10,7 +10,7 @@ base_path = os.getcwd()
 path = os.path.join(base_path, 'dataset/')
 train_dir = os.path.join(path, 'train/')
 val_dir = os.path.join(path, 'validation/')
-test_dir = os.path.join(path, 'validation/')
+test_dir = os.path.join(path, 'test/')
 output_model = os.path.join(base_path, 'model_output')
 
 
