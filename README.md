@@ -28,7 +28,7 @@ STEPS_PER_EPOCH = image_numbers/BATH_SIZE
 ```  
 As it shows in get_DataFlow.py.
 1. The structure of simpel_cnn net is:  
-![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/simple_cnn_model.PNG)  
+![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/simple_cnn.PNG)  
 And the result:  
 2. The structure of vgg16 is:  
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/vggnet.PNG)  
