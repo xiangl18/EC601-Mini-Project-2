@@ -21,7 +21,7 @@ conv_base.trainable = False
 
 model.summary()
 
-model.compile(optimizer='adam',loss='binary_crossentropy',metrics=['acc'])
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 model.fit_generator(
       df.train_flow,
