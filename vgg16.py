@@ -14,6 +14,7 @@ model.add(conv_base)
 model.add(layers.Flatten())
 model.add(layers.Dense(256, activation='relu'))
 model.add(layers.Dense(2, activation='sigmoid'))
+conv_base.trainable=False
 
 model.summary()
 
