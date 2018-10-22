@@ -32,5 +32,5 @@ model.fit_generator(
       validation_steps=df.BATH_SIZE,
     callbacks=[TensorBoard(log_dir='log_dir')])
 
-cnn.save(df.output_model + '/simple_cnn_model.h5')
+model.save(df.output_model + '/simple_cnn_model.h5')
 
