@@ -10,6 +10,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 base_model = ResNet50(weights='imagenet', include_top=False, pooling='avg')
 model = models.Sequential()
 model.add(base_model)
+model.add(layers.Dense(256, activation='relu'))
 model.add(layers.Dense(2, activation='softmax'))
 
 
