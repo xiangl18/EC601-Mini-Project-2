@@ -6,7 +6,7 @@ import get_DataFlow as df
 import glob as gb
 
 
-
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 def get_inputs(A):
     pre_x = []
     for s in A:
