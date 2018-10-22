@@ -4,7 +4,6 @@ import os
 
 BATH_SIZE = 32
 EPOCHS = 40
-STEPS_PER_EPOCH = 100
 
 base_path = os.getcwd()
 path = os.path.join(base_path, 'dataset/')
