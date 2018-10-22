@@ -15,7 +15,6 @@ model.add(layers.Flatten())
 model.add(layers.Dense(256, activation='relu'))
 model.add(layers.Dense(2, activation='sigmoid'))
 
-
 model.summary()
 
 model.compile(optimizer='rmsprop', loss='binary_crossentropy', metrics=['accuracy'])
@@ -30,4 +29,8 @@ model.fit_generator(
     callbacks=[TensorBoard(log_dir='log_dir2')])
 
 model.save(df.output_model + '/vgg16.h5')
+
+
+
+
 
