@@ -1,6 +1,5 @@
 from keras.applications import VGG16
 from keras import models,layers,optimizers
-from keras.preprocessing.image import ImageDataGenerator
 from keras.callbacks import TensorBoard
 import get_DataFlow as df
 import os
