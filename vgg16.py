@@ -17,7 +17,7 @@ model.add(layers.Dense(2, activation='sigmoid'))
 
 model.summary()
 
-model.compile(optimizer='rmsprop', loss='binary_crossentropy', metrics=['accuracy'])
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 model.fit_generator(
       df.train_flow,
