@@ -10,16 +10,16 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 conv_base = VGG16(weights='imagenet', include_top=False, input_shape=(128, 128, 3))
-
 model = models.Sequential()
 model.add(conv_base)
 model.add(layers.Flatten())
 model.add(layers.Dense(256, activation='relu'))
-model.add(layers.Dense(1, activation='sigmoid'))
+model.add(layers.Dense(2, activation='sigmoid'))
+
 
 model.summary()
 
-model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+model.compile(optimizer='rmsprop', loss='binary_crossentropy', metrics=['accuracy'])
 
 model.fit_generator(
       df.train_flow,
@@ -31,8 +31,4 @@ model.fit_generator(
     callbacks=[TensorBoard(log_dir='log_dir2')])
 
 model.save(df.output_model + '/vgg16.h5')
-
-
-
-
 
