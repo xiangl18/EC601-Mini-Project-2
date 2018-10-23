@@ -23,7 +23,7 @@ Result
 The tranning parameters are:  
 ```python  
 BATH_SIZE = 32
-EPOCHS = 40
+EPOCHS = 100
 STEPS_PER_EPOCH = image_numbers/BATH_SIZE  
 ```  
 As it shows in get_DataFlow.py.
@@ -32,12 +32,15 @@ As it shows in get_DataFlow.py.
 And the result:  
 2. The structure of vgg16 is:  
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/vggnet.PNG)  
-3. The structure of resnet is:  
-![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/resnet.PNG) 
-4. For the training result, the result of training on vgg16:  
+3. The structure of mobilenet is:  
+![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/mobilenet.PNG) 
+4. For the training result, the result of training on vgg16 before fine tune:  
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/vgg_eval.PNG)  
 The validation accuracy is 74.8%.  
-As for the result of training on resnet:  
+After we do the fine tuning, and result is :  
+  
+  
+As for the result of training on mobilenet before fine tune:  
 
 
 
