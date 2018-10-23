@@ -29,6 +29,6 @@ history = model.fit_generator(
     verbose=1,
     validation_data=df.val_flow,
     validation_steps=df.BATH_SIZE,
-    callbacks=[TensorBoard(log_dir='log_dir4/2')])
+    callbacks=[TensorBoard(log_dir='log_dir2/2')])
 
 model.save(df.output_model + '/mobilenet_fine_tune.h5')
