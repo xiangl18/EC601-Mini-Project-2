@@ -34,10 +34,10 @@ And the result:
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/vggnet.PNG)  
 3. The structure of mobilenet is:  
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/mobilenet.PNG) 
-4. For the training result, the result of training on vgg16 before fine tune, we trained for 40 epoches:  
+4. For the training result, the result of training on vgg16 before fine tune, we train for 40 epoches:  
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/vgg_val.PNG)  
 The validation accuracy is 74.4%.  
-After we do the fine tuning, and result is :  
+After we do the fine tuning, train for 30 epochs, and the result is :  
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/vgg_val.PNG) 
   
   
