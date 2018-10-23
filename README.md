@@ -31,20 +31,10 @@ As it shows in get_DataFlow.py.
 I use images including 392 cars and 392 trucks to build the dataset.
 1. The structure of simpel_cnn net is:  
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/simple_cnn.PNG)  
-And the result:  
-2. The structure of vgg16 is:  
-![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/vggnet.PNG)  
-3. The structure of mobilenet is:  
+And the result of training for 100epoches on simple_cnn net is:  
+2. The structure of mobilenet is:  
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/mobilenet.PNG) 
-4. For the training result, the result of training on vgg16 before fine tune, we train for 40 epoches:  
-![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/vgg_val.PNG)  
-The validation accuracy is 74.4%.  
-After we do the fine tuning, train for 30 epochs, and the result is :  
-![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/vgg_finetune_val.PNG)  
-The validation accuracy is 83.3%.
-  
-  
-As for the result of training on mobilenet before fine tune, we train for 100 epoches:  
+3. For the training result, the result of training on mobilenet before fine tune, I train for 100 epoches, is:  
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/mobilenet_val.PNG)  
 The validation accuracy is 83.3%.
 After we do the fine tuning, train for 30 epochs, and the result is :  
