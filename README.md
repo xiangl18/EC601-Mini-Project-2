@@ -17,7 +17,7 @@ The images are divided at the ratio of 80% trian, 10% test, 10% validation.
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/car.368.jpg)  
 For this iamge, when you run the eval.py with the fine-tuning resnet model, you will get the result, A label with possibility:  
 ```cmd  
-[['cars', 0.6442234814167023]]  
+[['cars', 0.8442234814167023]]  
 ```  
 Result
 ---   
