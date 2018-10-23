@@ -37,7 +37,7 @@ And the result of training for 100epoches on simple_cnn net is:
 3. For the training result, the result of training on mobilenet before fine tune, I train for 100 epoches, is:  
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/mobilenet_val.PNG)  
 The validation accuracy is 83.3%.
-After we do the fine tuning, train for 30 epochs, and the result is :  
+After we do fine tuning, and train for 30 epochs, the result is :  
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/mobilenet_finetune_val.PNG)  
 The validation accuracy is 83.3%.
 
