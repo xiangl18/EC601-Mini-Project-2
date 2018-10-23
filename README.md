@@ -33,7 +33,7 @@ I use images including 392 cars and 392 trucks to build the dataset.
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/simple_cnn.PNG)  
 And the result of training for 100epoches on simple_cnn net is:  
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/simple_cnn_val.PNG)  
-The validation accuracy is 68.42%
+The validation accuracy is 68.42%.
 2. The structure of mobilenet is:  
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/mobilenet.PNG) 
 3. For the training result, the result of training on mobilenet before fine tune, I train for 100 epoches, is:  
