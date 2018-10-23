@@ -40,13 +40,16 @@ And the result:
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/vgg_val.PNG)  
 The validation accuracy is 74.4%.  
 After we do the fine tuning, train for 30 epochs, and the result is :  
-![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/vgg_finetune_val.PNG) 
+![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/vgg_finetune_val.PNG)  
+The validation accuracy is 83.3%.
   
   
 As for the result of training on mobilenet before fine tune, we train for 100 epoches:  
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/mobilenet_val.PNG)  
+The validation accuracy is 83.3%.
 After we do the fine tuning, train for 30 epochs, and the result is :  
 ![Image text](https://github.com/xiangl18/EC601-Mini-Project-2/raw/master/img_folder/mobilenet_finetune_val.PNG)  
+The validation accuracy is 83.3%.
 
 
 
