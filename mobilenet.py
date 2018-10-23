@@ -1,5 +1,5 @@
-from keras.applications import VGG16
-from keras import models,layers,optimizers
+from keras.applications import MobileNet
+from keras import models,layers, optimizers
 from keras.callbacks import TensorBoard
 import get_DataFlow as df
 import os
@@ -8,13 +8,13 @@ import os
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
-conv_base = VGG16(weights='imagenet', include_top=False, input_shape=(128, 128, 3))
+conv_base = MobileNet(weights='imagenet', include_top=False, input_shape=(128, 128, 3))
 model = models.Sequential()
 model.add(conv_base)
 model.add(layers.Flatten())
 model.add(layers.Dense(256, activation='relu'))
 model.add(layers.Dense(2, activation='sigmoid'))
-conv_base.trainable=False
+conv_base.trainable = False
 
 model.summary()
 
@@ -27,11 +27,6 @@ model.fit_generator(
       verbose=1,
       validation_data=df.val_flow,
       validation_steps=df.BATH_SIZE,
-    callbacks=[TensorBoard(log_dir='log_dir2')])
+    callbacks=[TensorBoard(log_dir='log_dir2/1')])
 
-model.save(df.output_model + '/vgg16.h5')
-
-
-
-
-
+model.save_weights(df.output_model + '/mobilenet_use.h5')
