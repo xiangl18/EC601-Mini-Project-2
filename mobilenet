@@ -1,0 +1,20 @@
+model.add(conv_base)
+model.add(layers.Flatten())
+model.add(layers.Dense(256, activation='relu'))
+model.add(layers.Dense(2, activation='sigmoid'))
+conv_base.trainable = False
+
+model.summary()
+
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+model.fit_generator(
+      df.train_flow,
+      steps_per_epoch=df.image_numbers // df.BATH_SIZE,
+      epochs=df.EPOCHS,
+      verbose=1,
+      validation_data=df.val_flow,
+      validation_steps=df.BATH_SIZE,
+    callbacks=[TensorBoard(log_dir='log_dir4')])
+
+model.save(df.output_model + '/mobilenet.h5')
